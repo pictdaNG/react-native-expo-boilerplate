@@ -11,7 +11,7 @@ You'll find the Expo guide & docs [here](https://docs.expo.io).
 
 ## Setup
 * Navigate to your terminal
-* Clone the repository using `git clone https://github.com/pictdaNG/react-native-expo-boilerplate.git` from your terminal
+* Clone the repository using `git clone https://github.com/pictdaNG/react-native-expo-boilerplate.git` in your terminal
 * Navigate into the directory where the cloned project is located in your terminal
 * Run `cd react-native-expo-boilerplate.git` in your terminal
 * Next run `yarn install`  or `npm install` in your terminal to install dependencies
