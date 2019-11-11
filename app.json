@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "react-native-expo-boilerplate",
+    "name": "PICTDA",
     "description": "This project is really great.",
-    "slug": "react-native-expo-boilerplate",
+    "slug": "PICTDA",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -10,7 +10,7 @@
       "android"
     ],
     "version": "1.0.0",
-    "orientation": "landscape",
+    "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",
     "splash": {
       "image": "./src/assets/images/splash.png",

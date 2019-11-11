@@ -1,7 +1,7 @@
 'use strict';
 import React, {Component} from 'react';
 import { View, StyleSheet } from 'react-native';
-import {DisplayText, SubmitButton, Alert, SingleButtonAlert} from '../../components';
+import {DisplayText, SubmitButton} from '../../components';
 import styles from './styles';
 
 
@@ -14,12 +14,6 @@ export default class Home extends Component {
       showAlert2 : false,
     }
 
-    this.handleLogin = this.handleLogin.bind(this);
-    this.handleRegister = this.handleRegister.bind(this);
-    this.handleForgetPassword = this.handleForgetPassword.bind(this);
-    this.handleCloseNotification = this.handleCloseNotification.bind(this);
-    this.handleShowAlert = this.handleShowAlert.bind(this);
-
   }
 
 
@@ -27,14 +21,7 @@ export default class Home extends Component {
     return this.props.navigation.navigate('Login');
   };
 
-  handleForgetPassword = () => {
-    return this.props.navigation.navigate('ForgetPassword');
-  };
-
-  handleRegister = () => {
-    return this.props.navigation.navigate('Register');
-  };
-
+  
   handleCloseNotification = () => {
     return this.setState({
        showAlert : false,
@@ -62,7 +49,7 @@ export default class Home extends Component {
         <DisplayText
           text={'ForgetPassword'}
           style={StyleSheet.flatten(styles.text)}
-          onPress = {this.handleForgetPassword}
+          onPress = {this.handleLogin}
         />
 
         <SubmitButton
@@ -74,14 +61,14 @@ export default class Home extends Component {
         <DisplayText
           text={'Register'}
           style={StyleSheet.flatten(styles.text)}
-          onPress = {this.handleRegister}
+          onPress = {this.handleLogin}
         />
 
 
          <DisplayText
           text={'Show Alert'}
           style={StyleSheet.flatten(styles.text)}
-          onPress = {this.handleShowAlert}
+          onPress = {this.handleLogin}
         />
 
 
@@ -90,26 +77,6 @@ export default class Home extends Component {
           style={StyleSheet.flatten(styles.text)}
           onPress = {this.handleShowAlert2}
         />
-
-
-        <Alert
-          title = {'Alert'}
-          message = {'Hello, I\'m working as expected'}
-          handleCloseNotification = {this.handleCloseNotification}
-          visible = {showAlert}
-          positiveButton = {'OK'}
-          negetiveButton= {'Cancel'}
-        />  
-
-
-        <SingleButtonAlert
-          title = {'Single Button Alert'}
-          message = {'Hello, I\'m working as expected'}
-          handleCloseNotification = {this.handleCloseNotification}
-          visible = {showAlert2}
-          positiveButton = {'OK'}
-        />  
-
      </View>
    )
    

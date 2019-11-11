@@ -1,10 +1,8 @@
-import { createStackNavigator, createSwitchNavigator } from 'react-navigation';
-
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import { StatusBar } from 'react-native';
 import  Home  from '../screens/Home/Home';
 import  Login  from '../screens/Login/Login';
-import  Register  from '../screens/Register/Register';
-import ForgetPassword from '../screens/ForgetPassword/ForgetPassword';
 
 
  const AuthStack = createStackNavigator({ 
@@ -21,26 +19,11 @@ import ForgetPassword from '../screens/ForgetPassword/ForgetPassword';
       header: null
     },
   },
-
-  Register: {
-    screen: Register,
-     navigationOptions : {
-       header: null
-     }
-  },
-
-  ForgetPassword: {
-   screen: ForgetPassword,
-    navigationOptions: {
-     header: null
-    }
-  },
-
 });
 
 
 
-export default createSwitchNavigator({
+const AppSwitchNavigator = createSwitchNavigator({
     AuthLoading:Home,
     Auth:AuthStack,
   },
@@ -48,4 +31,7 @@ export default createSwitchNavigator({
     initialRouteName: 'AuthLoading',
   }
 );
+
+export default createAppContainer(AppSwitchNavigator);
+
 
