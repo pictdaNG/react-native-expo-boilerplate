@@ -2,7 +2,11 @@ import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { StatusBar } from 'react-native';
 import  Home  from '../screens/Home/Home';
-import  Login  from '../screens/Login/Login';
+import  Error  from '../screens/Error/Error';
+import  Success  from '../screens/Success/Success';
+import  Network  from '../screens/Network/Network';
+
+
 
 
  const AuthStack = createStackNavigator({ 
@@ -13,12 +17,29 @@ import  Login  from '../screens/Login/Login';
     }
   },
 
-  Login: {
-    screen: Login,
+  Success: {
+    screen: Success,
     navigationOptions: {
       header: null
     },
   },
+
+
+  Error: {
+    screen: Error,
+    navigationOptions: {
+      header: null
+    },
+  },
+
+  Network: {
+    screen: Network,
+    navigationOptions: {
+      header: null
+    },
+  },
+
+  
 });
 
 

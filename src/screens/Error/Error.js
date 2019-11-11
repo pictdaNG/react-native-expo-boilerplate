@@ -4,16 +4,17 @@ import React, {Component} from 'react';
 import { PropTypes } from 'prop-types';
 import { View, Image, StyleSheet,} from 'react-native';
 
-export default class Network extends Component {
+export default class Error extends Component {
  
   render() {
+
     return (
       
         <View style={styles.wrapper}>
           <View style={styles.loaderContainer}>
             <Image
               style={styles.loaderImage}
-              source={require('../../assets/images/network.gif')}
+              source={require('../../assets/images/error.gif')}
               /* source={require('../../assets/images/whiteLoader.gif')} */
 
             />

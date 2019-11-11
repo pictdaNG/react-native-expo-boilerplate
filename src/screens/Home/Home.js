@@ -4,7 +4,6 @@ import { View, StyleSheet } from 'react-native';
 import {DisplayText, SubmitButton} from '../../components';
 import styles from './styles';
 
-
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -18,8 +17,18 @@ export default class Home extends Component {
 
 
   handleLogin = () => {
-    return this.props.navigation.navigate('Login');
+    return this.props.navigation.navigate('Success');
   };
+
+  handleLogin2 = () => {
+    return this.props.navigation.navigate('Error');
+  };
+
+  handleLogin3 = () => {
+    return this.props.navigation.navigate('Network');
+  };
+
+
 
   
   handleCloseNotification = () => {
@@ -61,14 +70,14 @@ export default class Home extends Component {
         <DisplayText
           text={'Register'}
           style={StyleSheet.flatten(styles.text)}
-          onPress = {this.handleLogin}
+          onPress = {this.handleLogin3}
         />
 
 
          <DisplayText
           text={'Show Alert'}
           style={StyleSheet.flatten(styles.text)}
-          onPress = {this.handleLogin}
+          onPress = {this.handleLogin2}
         />
 
 
